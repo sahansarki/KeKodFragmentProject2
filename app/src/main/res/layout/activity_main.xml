@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_200"
+            android:orientation="vertical"
+            android:tag="linearLayout"
+            tools:context=".MainActivity">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/animalscience" />
+
+            <FrameLayout
+                android:id="@+id/fragmentDetail"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <FrameLayout
+                android:id="@+id/newOne"
+                android:clickable="true"
+                android:name="com.sahan.newsproject2.NewOneFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true" />
+
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:textSize="1dp" />
+
+            <FrameLayout
+                android:id="@+id/newThree"
+                android:name="com.sahan.newsproject2.NewThreeFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:textSize="1dp" />
+
+            <FrameLayout
+                android:id="@+id/newOne_2"
+                android:name="com.sahan.newsproject2.NewOneFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:textSize="1dp" />
+
+            <FrameLayout
+                android:id="@+id/newTwo"
+                android:name="com.sahan.newsproject2.NewTwoFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:textSize="1dp" />
+
+            <FrameLayout
+                android:id="@+id/newThree_2"
+                android:name="com.sahan.newsproject2.NewThreeFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:textSize="1dp" />
+
+            <FrameLayout
+                android:id="@+id/newTwo_2"
+                android:name="com.sahan.newsproject2.NewTwoFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:textSize="1dp" />
+
+            <FrameLayout
+                android:id="@+id/newThree_3"
+                android:name="com.sahan.newsproject2.NewThreeFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--        asdas-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:textSize="1dp" />
+
+            <FrameLayout
+                android:id="@+id/newOne_3"
+                android:name="com.sahan.newsproject2.NewOneFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:textSize="1dp" />
+
+            <FrameLayout
+                android:id="@+id/newThree_4"
+                android:name="com.sahan.newsproject2.NewThreeFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:textSize="1dp" />
+
+            <FrameLayout
+                android:id="@+id/newOne_4"
+                android:name="com.sahan.newsproject2.NewOneFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:textSize="1dp" />
+
+            <FrameLayout
+                android:id="@+id/newTwo_3"
+                android:name="com.sahan.newsproject2.NewTwoFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:textSize="1dp" />
+
+            <FrameLayout
+                android:id="@+id/newThree_5"
+                android:name="com.sahan.newsproject2.NewThreeFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:textSize="1dp" />
+
+            <FrameLayout
+                android:id="@+id/newTwo_4"
+                android:name="com.sahan.newsproject2.NewTwoFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:textSize="1dp" />
+
+            <FrameLayout
+
+                android:id="@+id/newThree_6"
+                android:name="com.sahan.newsproject2.NewThreeFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            />
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>
+
