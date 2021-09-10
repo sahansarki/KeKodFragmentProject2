@@ -7,11 +7,9 @@ import androidx.fragment.app.Fragment
 import com.sahan.kekodfragmentproject2.databinding.ActivityMainBinding
 
 
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private var i = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +23,36 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+
+        attachFragments()
+
+    }
+
+    private fun addFragments(id: Int, fragment: Fragment) {
+
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.add(id, fragment)
+
+        fragmentTransaction.addToBackStack(null)
+
+        fragmentTransaction.setReorderingAllowed(true)
+        fragmentTransaction.commit()
+
+
+    }
+
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        supportFragmentManager.beginTransaction().remove(supportFragmentManager.fragments[0]).commit()
+
+        attachFragments()
+
+
+    }
+
+    private fun attachFragments() {
 
         val newOneFragment = NewOneFragment.newInstance("asdasd", "asadadas")
         val newOneFragment2 = NewOneFragment.newInstance("asdasd", "asadadas")
@@ -55,24 +83,6 @@ class MainActivity : AppCompatActivity() {
         addFragments(binding.newThree5.id, newThreeFragment5)
         addFragments(binding.newTwo4.id, newTwoFragment4)
         addFragments(binding.newThree6.id, newThreeFragment6)
-
-    }
-
-    private fun addFragments(id: Int, fragment: Fragment) {
-
-        val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.add(id, fragment)
-
-        fragmentTransaction.addToBackStack(null)
-
-        fragmentTransaction.setReorderingAllowed(true)
-        fragmentTransaction.commit()
-
-
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
 
     }
 
