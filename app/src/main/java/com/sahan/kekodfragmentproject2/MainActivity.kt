@@ -4,85 +4,170 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
+import com.sahan.kekodfragmentproject2.Fragments.DetailFragment
+import com.sahan.kekodfragmentproject2.Fragments.NewOneFragment
+import com.sahan.kekodfragmentproject2.Fragments.NewThreeFragment
+import com.sahan.kekodfragmentproject2.Fragments.NewTwoFragment
 import com.sahan.kekodfragmentproject2.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
+    private val fragmentList: MutableList<Fragment> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
 
-        supportFragmentManager.addOnBackStackChangedListener {
+        initHome(false)
 
-            println("Fragment count in the back stack: ${supportFragmentManager.fragments} " + supportFragmentManager.backStackEntryCount)
+    }
+
+    fun initHome(willDelete: Boolean) {
+        this.makeTransaction {
+            when (willDelete) {
+                true -> {
+                    fragmentList.forEach { fragment ->
+                        it.remove(fragment)
+                    }
+                }
+
+                false -> {
+                    it.add(
+                        binding.newOne.id,
+                        NewOneFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
+                    it.add(
+                        binding.newThree.id,
+                        NewThreeFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
+
+                    it.add(
+                        binding.newOne2.id,
+                        NewOneFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
 
 
+
+                    it.add(
+                        binding.newTwo.id,
+                        NewTwoFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
+
+                    it.add(
+                        binding.newThree2.id,
+                        NewThreeFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
+
+                    it.add(
+                        binding.newTwo2.id,
+                        NewTwoFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
+
+                    it.add(
+                        binding.newThree3.id,
+                        NewThreeFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
+
+                    it.add(
+                        binding.newOne3.id,
+                        NewOneFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
+                    it.add(
+                        binding.newThree4.id,
+                        NewThreeFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
+
+                    it.add(
+                        binding.newOne4.id,
+                        NewOneFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
+                    it.add(
+                        binding.newTwo3.id,
+                        NewTwoFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
+                    it.add(
+                        binding.newThree5.id,
+                        NewThreeFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
+
+                    it.add(
+                        binding.newOne4.id,
+                        NewOneFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
+
+                    it.add(
+                        binding.newTwo4.id,
+                        NewTwoFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
+
+                    it.add(
+                        binding.newThree6.id,
+                        NewThreeFragment.newInstance().also {
+                            fragmentList.add(it)
+                        }
+                    )
+                }
+            }
         }
-
-        attachFragments()
-
     }
 
-    private fun addFragments(id: Int, fragment: Fragment) {
+    fun initDetail(willDelete: Boolean, newId : Int){
+        this.makeTransaction {
+            when(willDelete) {
+                true -> {
+                    it.remove(fragmentList.removeAt(0))
+                    fragmentList.clear()
+                }
 
-        val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.add(id, fragment)
-
-        fragmentTransaction.addToBackStack(null)
-
-        fragmentTransaction.setReorderingAllowed(true)
-        fragmentTransaction.commit()
-
-
+                false -> {
+                    it.add(
+                        binding.fragmentDetail.id,
+                        DetailFragment.newInstance(newId).also { fragmentList.add(it) }
+                    )
+                }
+            }
+        }
     }
 
+    private fun makeTransaction(
+        config: (FragmentTransaction) -> Unit
+    ) {
+        val transaction = supportFragmentManager.beginTransaction()
+        config(transaction)
+        transaction.commit()
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-
-        supportFragmentManager.beginTransaction().remove(supportFragmentManager.fragments[0]).commit()
-
-        attachFragments()
-
-
-    }
-
-    private fun attachFragments() {
-
-        val newOneFragment = NewOneFragment.newInstance("asdasd", "asadadas")
-        val newOneFragment2 = NewOneFragment.newInstance("asdasd", "asadadas")
-        val newOneFragment3 = NewOneFragment.newInstance("asdasd", "asadadas")
-        val newOneFragment4 = NewOneFragment.newInstance("asdasd", "asadadas")
-        val newTwoFragment = NewTwoFragment.newInstance("asdasd", "asadadas")
-        val newTwoFragment2 = NewTwoFragment.newInstance("asdasd", "asadadas")
-        val newTwoFragment3 = NewTwoFragment.newInstance("asdasd", "asadadas")
-        val newTwoFragment4 = NewTwoFragment.newInstance("asdasd", "asadadas")
-        val newThreeFragment = NewThreeFragment.newInstance("asdfasd", "safdsf")
-        val newThreeFragment2 = NewThreeFragment.newInstance("asdfasd", "safdsf")
-        val newThreeFragment3 = NewThreeFragment.newInstance("asdfasd", "safdsf")
-        val newThreeFragment4 = NewThreeFragment.newInstance("asdfasd", "safdsf")
-        val newThreeFragment5 = NewThreeFragment.newInstance("asdfasd", "safdsf")
-        val newThreeFragment6 = NewThreeFragment.newInstance("asdfasd", "safdsf")
-
-        addFragments(binding.newOne.id, newOneFragment)
-        addFragments(binding.newThree.id, newThreeFragment)
-        addFragments(binding.newOne2.id, newOneFragment2)
-        addFragments(binding.newTwo.id, newTwoFragment)
-        addFragments(binding.newThree2.id, newThreeFragment2)
-        addFragments(binding.newTwo2.id, newTwoFragment2)
-        addFragments(binding.newThree3.id, newThreeFragment3)
-        addFragments(binding.newOne3.id, newOneFragment3)
-        addFragments(binding.newThree4.id, newThreeFragment4)
-        addFragments(binding.newOne4.id, newOneFragment4)
-        addFragments(binding.newTwo3.id, newTwoFragment3)
-        addFragments(binding.newThree5.id, newThreeFragment5)
-        addFragments(binding.newTwo4.id, newTwoFragment4)
-        addFragments(binding.newThree6.id, newThreeFragment6)
 
     }
 

@@ -1,10 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DetailFragment">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+
+        <variable
+            name="DetailNew"
+            type="com.sahan.kekodfragmentproject2.model.News" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/chocolate_frog"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:text="BASLIK BASLIK BASLIK BASLIK BASLIK BASLIK BASLIK BASLIK"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"
+                android:text="@{DetailNew.shortBody}"
+                android:textSize="18sp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:text="@{DetailNew.longBody}"
+
+                />
 
 
 
-</FrameLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+
+</layout>
