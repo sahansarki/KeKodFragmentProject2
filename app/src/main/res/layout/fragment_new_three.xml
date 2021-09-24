@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <import type="com.sahan.kekodfragmentproject2.handler.ActionHandler" />
         <variable
             name="News"
             type="com.sahan.kekodfragmentproject2.handler.SectionHandler" />
@@ -13,7 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_red_dark"
+        android:background="@android:color/holo_green_dark"
         android:orientation="vertical"
         android:onClick="@{News::getIntoDetail}"
         tools:context=".Fragments.NewOneFragment">
@@ -24,7 +24,11 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
-            android:background="@drawable/elephant" />
+            CornerRadius= "@{30}"
+            Height="@{650}"
+            Width="@{1000}"
+            LoadImage = "@{News.news.image}"
+            tools:background="@drawable/elephant" />
 
 
         <TextView
@@ -34,7 +38,7 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text="Reuniting an Orphan Elephant and Her Mom, Perhaps, With DNA and Luck"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold"
 
             />
@@ -46,7 +50,7 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text="@{News.news.shortBody}"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
 
             />
 
@@ -57,7 +61,7 @@
             android:paddingStart="10dp"
             android:paddingBottom="10dp"
             android:text="Shared 8 hours ago"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
 
     </LinearLayout>

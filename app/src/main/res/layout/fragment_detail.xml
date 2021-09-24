@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
+        <import type="com.sahan.kekodfragmentproject2.handler.ActionHandler" />
 
         <variable
             name="DetailNew"
             type="com.sahan.kekodfragmentproject2.model.News" />
+
+        <variable
+            name="activity"
+            type="com.sahan.kekodfragmentproject2.MainActivity" />
 
     </data>
 
@@ -25,7 +30,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
-                android:src="@drawable/chocolate_frog"
+                android:layout_margin="10dp"
+                CornerRadius= "@{10}"
+                Height="@{650}"
+                Width="@{1000}"
+                LoadImage= "@{DetailNew.image}"
+                tools:background="@drawable/chocolate_frog"
                 />
 
             <TextView

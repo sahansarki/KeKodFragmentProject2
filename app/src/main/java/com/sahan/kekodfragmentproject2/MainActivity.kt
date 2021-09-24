@@ -143,8 +143,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun initDetail(willDelete: Boolean, newId : Int){
-        this.makeTransaction {
+    fun initDetail(willDelete: Boolean, newId : Int? = null){
+        this.makeTransaction { it ->
             when(willDelete) {
                 true -> {
                     it.remove(fragmentList.removeAt(0))
@@ -152,9 +152,12 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 false -> {
+                    fragmentList.clear()
                     it.add(
                         binding.fragmentDetail.id,
-                        DetailFragment.newInstance(newId).also { fragmentList.add(it) }
+                        DetailFragment.newInstance(newId!!).also {
+                            fragmentList.add(it as DetailFragment)
+                        }
                     )
                 }
             }

@@ -6,7 +6,7 @@ object mockData {
     val newsList = listOf(
         News(0,
             "The black hole doesn’t fit theories of how the cosmic beasts grow so massive",
-            "https://www.sciencenews.org/wp-content/uploads/2021/07/071621_mt_event-horizon_feat-1028x580.jpg",
+            "https://www.sciencenews.org/wp-content/uploads/2021/09/090221_am_new-supernova_feat-1030x580.jpg",
             """Babies may laugh like some apes a few months after birth before transitioning to chuckling more like human adults, a new study finds.
 
 Laughter links humans to great apes, our evolutionary kin (SN: 6/4/09). Human adults tend to laugh while exhaling (SN: 6/10/15), but chimpanzees and bonobos mainly laugh in two ways. One is like panting, with sound produced on both in and out breaths, and the other has outbursts occurring on exhales, like human adults.
@@ -25,7 +25,7 @@ The idea that social interactions shape human babies’ laughs matches observati
         ),
         News(1,
             "The black hole doesn’t fit theories of how the cosmic beasts grow so massive",
-            "https://www.sciencenews.org/wp-content/uploads/2021/07/071621_mt_event-horizon_feat-1028x580.jpg",
+            "https://www.sciencenews.org/wp-content/uploads/2021/01/011421_mt_quasar_feat-1030x580.jpg",
             """Babies may laugh like some apes a few months after birth before transitioning to chuckling more like human adults, a new study finds.
 
 Laughter links humans to great apes, our evolutionary kin (SN: 6/4/09). Human adults tend to laugh while exhaling (SN: 6/10/15), but chimpanzees and bonobos mainly laugh in two ways. One is like panting, with sound produced on both in and out breaths, and the other has outbursts occurring on exhales, like human adults.
@@ -44,7 +44,7 @@ The idea that social interactions shape human babies’ laughs matches observati
         ),
         News(2,
             "The black hole doesn’t fit theories of how the cosmic beasts grow so massive",
-            "https://www.sciencenews.org/wp-content/uploads/2021/07/071621_mt_event-horizon_feat-1028x580.jpg",
+            "https://www.sciencenews.org/wp-content/uploads/2021/09/090721_cw_babylaugh_feat-1030x580.jpg",
             """Babies may laugh like some apes a few months after birth before transitioning to chuckling more like human adults, a new study finds.
 
 Laughter links humans to great apes, our evolutionary kin (SN: 6/4/09). Human adults tend to laugh while exhaling (SN: 6/10/15), but chimpanzees and bonobos mainly laugh in two ways. One is like panting, with sound produced on both in and out breaths, and the other has outbursts occurring on exhales, like human adults.
@@ -63,7 +63,7 @@ The idea that social interactions shape human babies’ laughs matches observati
         ),
         News(3,
             "The black hole doesn’t fit theories of how the cosmic beasts grow so massive",
-            "https://www.sciencenews.org/wp-content/uploads/2021/07/071621_mt_event-horizon_feat-1028x580.jpg",
+            "https://www.sciencenews.org/wp-content/uploads/2020/10/101320_ec_superconductor_feat-1028x579.jpg",
             """Babies may laugh like some apes a few months after birth before transitioning to chuckling more like human adults, a new study finds.
 
 Laughter links humans to great apes, our evolutionary kin (SN: 6/4/09). Human adults tend to laugh while exhaling (SN: 6/10/15), but chimpanzees and bonobos mainly laugh in two ways. One is like panting, with sound produced on both in and out breaths, and the other has outbursts occurring on exhales, like human adults.
